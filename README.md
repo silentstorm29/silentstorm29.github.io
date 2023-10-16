@@ -13,6 +13,7 @@ A few Things About Me 😃
 - 🤔 I’m looking for help with ...
 -->
 - 💬 Ask me about AWS, Jenkins, Ansible. 
-- 📫 How to reach me: https://www.linkedin.com/in/silentstorm29/ else silentstorm29
+- 📫 How to reach me: https://www.linkedin.com/in/silentstorm29/
+- 😂 else on Instagram: https://www.instagram.com/silentstorm29/
 - 😄 Pronouns: She/Her
 - ⚡ Fun fact: INTJ
