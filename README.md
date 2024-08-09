@@ -6,7 +6,7 @@
 Here are some ideas to get you started:
 -->
 A few Things About Me 😃
-- 🔭 Hey! I'm a DevOps Engineer with 3 years of experience in designing and implementing fully
+- 🔭 I'm a DevOps Engineer with 3 years of experience in designing and implementing fully
 automated CI/CD pipelines, reducing deployment time & increasing the frequency of impactful
 microservices deployments.
 - 🤔 I enjoy exploring new technologies and writing blogs based on my
