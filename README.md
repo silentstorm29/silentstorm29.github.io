@@ -1,29 +1,68 @@
-### Hi there !!!
+---
+title: "About Me"
+description: "Learn more about Silent Storm, a Platform Engineer with a passion for DevOps, MLOps, and life."
+layout: "post"
+date: "2025-01-21"
+---
 
-<!--
-**silentstorm29/silentstorm29** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile. 
+![My Picture](/assets/myphotoi.JPG)
 
-Here are some ideas to get you started:
--->
-A few Things About Me 
--  I'm a Platform Engineer at Okta.
--  I was a Devops Engineer for 3 years at Paytm submerged in designing and implementing fully automated CI/CD pipelines,
-  creating infrastructure using terraform utilizing AWS as a cloud platform reducing deployment time & increasing the
-  frequency of impactful microservices deployments.
--  I plan to achieve my goal of learning MLOps and AiOps by the end of this year.
--  I enjoy exploring new technologies and writing blogs based on my
-learning experiences & research (published on Medium & Substack).
--  Outside of work, I love reading novels and self-help books (my current favorite is "The Power of Subconscious Mind" by
-Joseph Murphy), writing poems, and nurturing my passion for gardening, all helping in my
-sustained lifestyle. Nature inspires deep thinking and offers a unique perspective on tasks for
-me.
--  I’m looking to collaborate on any DevOps/SRE/Platform related Automation
-<!--
-- 🤔 I’m looking for help with ...
--->
--  Ask me about Linux, Scripting, Cloud, Git, JIRA, Automation, Configurations, Kubernetes, Docker, Networking, Log Analytics
--  How to reach me: https://www.linkedin.com/in/silentstorm29/
--  else on Instagram: https://www.instagram.com/silentstorm29/
--  checkout my little videos on Youtube: https://www.youtube.com/@silentstorm29
--  Pronouns: She/Her
--  Fun fact: INTJ
+# Hi there! 👋
+
+## A Few Things About Me
+
+I'm a **Platform Engineer at Okta**. Previously, I worked as a **DevOps Engineer for 3 years at Paytm**, where I was deeply immersed in:
+
+- Designing and implementing fully automated CI/CD pipelines.
+- Creating infrastructure using **Terraform** and leveraging **AWS** as a cloud platform.
+- Reducing deployment time and increasing the frequency of impactful microservices deployments.
+
+My current goal is to **learn MLOps and AiOps by the end of this year**. 🚀
+
+I have a passion for **exploring new technologies** and **writing blogs** based on my learning experiences and research, which I publish on **[Medium](#)** and **[Substack](#)**.
+
+---
+
+## Outside of Work
+
+When I'm not engineering solutions, you'll find me:
+
+- **Reading novels and self-help books** (my current favorite: *The Power of Subconscious Mind* by Joseph Murphy).
+- **Writing poems** that reflect my thoughts and emotions.
+- **Nurturing my passion for gardening**, which keeps me grounded and offers a unique perspective on life and work.
+
+Nature is a source of deep inspiration for me, fueling both my creativity and productivity. 🌱
+
+---
+
+## Collaboration and Expertise
+
+I'm always looking to **collaborate on DevOps/SRE/Platform-related automation** projects. 
+
+Feel free to **ask me about**:
+- Linux
+- Scripting
+- Cloud
+- Git
+- JIRA
+- Automation
+- Configurations
+- Kubernetes
+- Docker
+- Networking
+- Log Analytics
+
+---
+
+## Let's Connect!
+
+- [LinkedIn](https://www.linkedin.com/in/silentstorm29/) 🌐
+- [Instagram](https://www.instagram.com/silentstorm29/) 📸
+- [YouTube](https://www.youtube.com/@silentstorm29) 🎥
+
+---
+
+**Pronouns**: She/Her  
+**Fun Fact**: I'm an INTJ personality type!
+
+Thank you for stopping by! 💫
