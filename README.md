@@ -5,7 +5,6 @@ layout: "post"
 date: "2025-01-21"
 ---
 
-![My Picture](/assets/myphoto.JPG)
 
 # Hi there! 👋
 
