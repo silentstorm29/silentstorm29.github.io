@@ -35,7 +35,7 @@
     
         /* Parallax Section */
         .parallax {
-            background: url('assets/mybackground.jpeg') no-repeat center center fixed;
+            background: url('assets/mybackground.jpeg') no-repeat center center;
             background-size: cover;
             height: 300px;
             display: flex;
@@ -45,7 +45,15 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
             font-size: 2rem;
             text-align: center;
+            background-attachment: fixed; /* Parallax effect for desktop */
         }
+
+        /* Mobile Fallback */
+        @media screen and (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll; /* Disable fixed background for mobile */
+            }
+         }
     
         /* Main Content Container */
         .container {
@@ -225,19 +233,19 @@
         }
 
         @keyframes slideUpAndScale {
-        from {
-            opacity: 0;
-            transform: translateY(20px) scale(0.8);
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
-        to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-    }
 
-    .about-image img {
-        animation: slideUpAndScale 1.5s ease-out;
-    }
+        .about-image img {
+            animation: slideUpAndScale 1.5s ease-out;
+        }
 
 
         /* Responsive Design */
