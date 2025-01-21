@@ -33,11 +33,13 @@
             text-decoration: underline;
         }
     
-        /* Parallax Section */
+        /* Default Parallax Styles for Desktop */
         .parallax {
+            position: relative;
+            height: 300px;
             background: url('assets/mybackground.jpeg') no-repeat center center;
             background-size: cover;
-            height: 300px;
+            background-attachment: fixed; /* Parallax effect */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,16 +47,16 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
             font-size: 2rem;
             text-align: center;
-            background-attachment: fixed; /* Parallax effect for desktop */
+            overflow: hidden;
         }
 
-        /* Mobile Fallback */
+        /* Mobile Fallback (Disable Fixed Background) */
         @media screen and (max-width: 768px) {
             .parallax {
-                background-attachment: scroll; /* Disable fixed background for mobile */
+                background-attachment: scroll; /* Mobile-friendly */
+                background-position: center center; /* Ensure proper alignment */
             }
-         }
-    
+        }
         /* Main Content Container */
         .container {
             max-width: 900px;
@@ -440,6 +442,17 @@
             }
         }
     </script>
+
+    <script>
+        document.addEventListener('scroll', function () {
+            const parallax = document.querySelector('.parallax');
+            if (parallax) {
+                const scrollPosition = window.scrollY;
+                parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`; /* Adjust the multiplier for intensity */
+            }
+        });
+    </script>
+
 </body>
 
 </html>
