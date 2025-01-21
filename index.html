@@ -11,15 +11,15 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            color: #333; /* Default text color */
-            background-color: #f9f9f9; /* Default background color */
+            color: #f0f0f0; /* Default text color for dark mode */
+            background-color: #121212; /* Default background color for dark mode */
             transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
         }
         h1, h2 {
-            color: #00509e; /* Heading color for light mode */
+            color: #80d0ff; /* Heading color for dark mode */
         }
         a {
-            color: #0078d4; /* Link color for light mode */
+            color: #80d0ff; /* Link color for dark mode */
             text-decoration: none;
         }
         a:hover {
@@ -29,8 +29,8 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #1e1e1e; /* Dark container background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             border-radius: 8px;
         }
         img {
@@ -47,40 +47,45 @@
             top: 20px;
             right: 20px;
             padding: 10px 15px;
-            background: #00509e;
-            color: white;
+            background: #80d0ff;
+            color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             z-index: 1000;
         }
         .toggle-button:hover {
-            background: #0078d4;
+            background: #b0e6ff;
         }
 
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #121212; /* Dark background */
-            color: #f0f0f0; /* Light text color */
+        /* Light Mode Styles */
+        body.light-mode {
+            background-color: #f9f9f9; /* Light background */
+            color: #333; /* Dark text color */
         }
-        .dark-mode h1, .dark-mode h2 {
-            color: #80d0ff; /* Heading color for dark mode */
+        .light-mode h1, .light-mode h2 {
+            color: #00509e; /* Heading color for light mode */
         }
-        .dark-mode a {
-            color: #80d0ff; /* Link color for dark mode */
+        .light-mode a {
+            color: #0078d4; /* Link color for light mode */
         }
-        .dark-mode a:hover {
-            color: #b0e6ff;
+        .light-mode a:hover {
+            color: #00509e;
         }
-        .dark-mode .container {
-            background: #1e1e1e; /* Dark container background */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark mode */
+        .light-mode .container {
+            background: #ffffff; /* Light container background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .light-mode .toggle-button {
+            background: #00509e;
+            color: white;
         }
     </style>
 </head>
-<body>
+<body class="dark-mode"> <!-- Default dark mode enabled here -->
+
     <!-- Light/Dark Mode Toggle Button -->
-    <button class="toggle-button" onclick="toggleTheme()">Switch to Dark Mode</button>
+    <button class="toggle-button" onclick="toggleTheme()">Switch to Light Mode</button>
 
     <!-- Main Content -->
     <div class="container">
@@ -105,6 +110,24 @@
             <li>🌿 <strong>Gardening</strong>, which fuels creativity and offers a fresh perspective.</li>
         </ul>
 
+        <h2>🛠️ Skills</h2>
+        <ul>
+            <li>🐧 Linux</li>
+            <li>📜 Scripting</li>
+            <li>☁️ Cloud</li>
+            <li>🔧 Git</li>
+            <li>📊 JIRA</li>
+            <li>⚙️ Automation</li>
+            <li>📝 Configurations</li>
+            <li>🐳 Kubernetes</li>
+            <li>🐳 Docker</li>
+            <li>🔌 Networking</li>
+            <li>📈 Log Analytics</li>
+            <li>🐍 Python</li>
+            <li>🛠️ Monitoring</li>
+            <li>💻 Shell</li>
+        </ul>
+
         <h2>🤝 Collaboration Opportunities</h2>
         <p>I’m always eager to collaborate on <strong>DevOps, SRE, and automation projects</strong>. Let’s build something amazing together! 🌟</p>
 
@@ -126,14 +149,14 @@
             const body = document.body;
             const button = document.querySelector('.toggle-button');
 
-            // Toggle dark-mode class on the body
-            body.classList.toggle('dark-mode');
+            // Toggle light-mode class on the body
+            body.classList.toggle('light-mode');
 
             // Update button text
-            if (body.classList.contains('dark-mode')) {
-                button.textContent = 'Switch to Light Mode';
-            } else {
+            if (body.classList.contains('light-mode')) {
                 button.textContent = 'Switch to Dark Mode';
+            } else {
+                button.textContent = 'Switch to Light Mode';
             }
         }
     </script>
