@@ -13,35 +13,83 @@
             padding: 0;
             color: #f0f0f0; /* Default text color for dark mode */
             background-color: #121212; /* Default background color for dark mode */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
+
         h1, h2 {
-            color: #80d0ff; /* Heading color for dark mode */
+            color: #80d0ff;
         }
+
         a {
-            color: #80d0ff; /* Link color for dark mode */
+            color: #80d0ff;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
+        /* Parallax Section Styles */
+        .parallax {
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        /* Container Section */
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 50px auto;
             padding: 20px;
-            background: #1e1e1e; /* Dark container background */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: #1e1e1e;
             border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
+
         img {
             max-width: 150px;
             border-radius: 50%;
             display: block;
             margin: 20px auto;
         }
+
         ul {
             padding-left: 20px;
+            list-style-type: none;
         }
+
+        ul li::before {
+            content: '•';
+            color: #80d0ff;
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skills-grid div {
+            background: #2b2b2b;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #f0f0f0;
+            font-size: 0.9rem;
+        }
+
         .toggle-button {
             position: fixed;
             top: 20px;
@@ -54,105 +102,71 @@
             cursor: pointer;
             z-index: 1000;
         }
+
         .toggle-button:hover {
             background: #b0e6ff;
         }
-
-        /* Light Mode Styles */
-        body.light-mode {
-            background-color: #f9f9f9; /* Light background */
-            color: #333; /* Dark text color */
-        }
-        .light-mode h1, .light-mode h2 {
-            color: #00509e; /* Heading color for light mode */
-        }
-        .light-mode a {
-            color: #0078d4; /* Link color for light mode */
-        }
-        .light-mode a:hover {
-            color: #00509e;
-        }
-        .light-mode .container {
-            background: #ffffff; /* Light container background */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .light-mode .toggle-button {
-            background: #00509e;
-            color: white;
-        }
     </style>
 </head>
-<body class="dark-mode"> <!-- Default dark mode enabled here -->
-
-    <!-- Light/Dark Mode Toggle Button -->
+<body class="dark-mode">
+    <!-- Light/Dark Mode Toggle -->
     <button class="toggle-button" onclick="toggleTheme()">Switch to Light Mode</button>
+
+    <!-- Parallax Header -->
+    <div class="parallax">
+        🌟 Welcome to My Space!
+    </div>
 
     <!-- Main Content -->
     <div class="container">
-        <h1>🌟 Welcome to My Space!</h1>
+        <h1>About Me</h1>
         <img src="assets/myphoto.JPG" alt="My Picture">
-        <p>Hi there! 👋 I'm Priyanka Sharma, and I'm thrilled to have you here. This is where I share my journey, passion, and experiences as a tech enthusiast and life explorer.</p>
+        <p>Hi there! 👋 I'm Priyanka Sharma, a Platform Engineer at Okta with a passion for building scalable, resilient infrastructure.</p>
 
-        <h2>🌐 About Me</h2>
-        <p>I’m a <strong>Platform Engineer at Okta</strong> with a keen interest in creating resilient and scalable infrastructure. Previously, I spent <strong>3 incredible years as a DevOps Engineer at Paytm</strong>, where I:</p>
+        <h2>Experience</h2>
         <ul>
-            <li>💻 Designed and implemented fully automated <strong>CI/CD pipelines</strong>.</li>
-            <li>🏗 Built infrastructure using <strong>Terraform</strong> and leveraged <strong>AWS</strong> as the cloud platform.</li>
-            <li>🚀 Reduced deployment times while boosting the frequency of impactful microservices deployments.</li>
-        </ul>
-        <p><strong>Current Mission:</strong> To master <em>MLOps</em> and <em>AiOps</em> by the end of the year! 🧠✨</p>
-
-        <h2>🌱 Beyond Work</h2>
-        <p>When I’m not working, I immerse myself in:</p>
-        <ul>
-            <li>📚 <strong>Reading</strong> (*Current Favorite: The Power of Subconscious Mind by Joseph Murphy*).</li>
-            <li>✍️ <strong>Writing poems</strong> to express thoughts and emotions.</li>
-            <li>🌿 <strong>Gardening</strong>, which fuels creativity and offers a fresh perspective.</li>
+            <li>Designed and implemented fully automated CI/CD pipelines.</li>
+            <li>Built infrastructure using Terraform on AWS.</li>
+            <li>Reduced deployment times and enhanced microservices scalability.</li>
         </ul>
 
-        <h2>🛠️ Skills</h2>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div>Linux</div>
+            <div>Scripting</div>
+            <div>Cloud</div>
+            <div>Git</div>
+            <div>JIRA</div>
+            <div>Automation</div>
+            <div>Configurations</div>
+            <div>Kubernetes</div>
+            <div>Docker</div>
+            <div>Networking</div>
+            <div>Log Analytics</div>
+            <div>Python</div>
+            <div>Monitoring</div>
+            <div>Shell</div>
+        </div>
+
+        <h2>Let’s Connect</h2>
         <ul>
-            <li>🐧 Linux</li>
-            <li>📜 Scripting</li>
-            <li>☁️ Cloud</li>
-            <li>🔧 Git</li>
-            <li>📊 JIRA</li>
-            <li>⚙️ Automation</li>
-            <li>📝 Configurations</li>
-            <li>🐳 Kubernetes</li>
-            <li>🐳 Docker</li>
-            <li>🔌 Networking</li>
-            <li>📈 Log Analytics</li>
-            <li>🐍 Python</li>
-            <li>🛠️ Monitoring</li>
-            <li>💻 Shell</li>
+            <li><a href="https://www.linkedin.com/in/silentstorm29/">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/silentstorm29/">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@silentstorm29">YouTube</a></li>
         </ul>
+    </div>
 
-        <h2>🤝 Collaboration Opportunities</h2>
-        <p>I’m always eager to collaborate on <strong>DevOps, SRE, and automation projects</strong>. Let’s build something amazing together! 🌟</p>
-
-        <h2>📬 Let’s Connect</h2>
-        <ul>
-            <li>🌐 <a href="https://www.linkedin.com/in/silentstorm29/">LinkedIn</a></li>
-            <li>📸 <a href="https://www.instagram.com/silentstorm29/">Instagram</a></li>
-            <li>🎥 <a href="https://www.youtube.com/@silentstorm29">YouTube</a></li>
-        </ul>
-
-        <h2>💡 Fun Fact</h2>
-        <p>I’m an <strong>INTJ personality type</strong> who thrives on planning, strategy, and exploring innovative ideas. Thank you for stopping by! 💫</p>
+    <div class="parallax">
+        🚀 Let’s Build Something Amazing Together!
     </div>
 
     <!-- JavaScript -->
     <script>
-        // Light/Dark Mode Toggle
         function toggleTheme() {
             const body = document.body;
             const button = document.querySelector('.toggle-button');
 
-            // Toggle light-mode class on the body
             body.classList.toggle('light-mode');
-
-            // Update button text
             if (body.classList.contains('light-mode')) {
                 button.textContent = 'Switch to Dark Mode';
             } else {
