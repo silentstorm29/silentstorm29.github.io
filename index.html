@@ -6,7 +6,7 @@
     <title>About Me - Silent Storm</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Custom Fonts and Colors */
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -39,6 +39,9 @@
             display: block;
             margin: 20px auto;
         }
+        ul {
+            padding-left: 20px;
+        }
         .toggle-button {
             position: fixed;
             top: 20px;
@@ -49,14 +52,33 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            z-index: 1000;
         }
         .toggle-button:hover {
             background: #0078d4;
         }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212; /* Dark background */
+            color: #f0f0f0; /* Light text color */
+        }
+        .dark-mode h1, .dark-mode h2 {
+            color: #80d0ff;
+        }
+        .dark-mode a {
+            color: #80d0ff;
+        }
+        .dark-mode a:hover {
+            color: #b0e6ff;
+        }
     </style>
 </head>
 <body>
+    <!-- Light/Dark Mode Toggle Button -->
     <button class="toggle-button" onclick="toggleTheme()">Switch to Dark Mode</button>
+
+    <!-- Main Content -->
     <div class="container">
         <h1>🌟 Welcome to My Space!</h1>
         <img src="assets/myphoto.JPG" alt="My Picture">
@@ -93,19 +115,20 @@
         <p>I’m an <strong>INTJ personality type</strong> who thrives on planning, strategy, and exploring innovative ideas. Thank you for stopping by! 💫</p>
     </div>
 
+    <!-- JavaScript -->
     <script>
         // Light/Dark Mode Toggle
         function toggleTheme() {
             const body = document.body;
             const button = document.querySelector('.toggle-button');
+
+            // Toggle dark-mode class on the body
             body.classList.toggle('dark-mode');
+
+            // Update button text
             if (body.classList.contains('dark-mode')) {
-                body.style.backgroundColor = '#333';
-                body.style.color = '#f9f9f9';
                 button.textContent = 'Switch to Light Mode';
             } else {
-                body.style.backgroundColor = '#f9f9f9';
-                body.style.color = '#333';
                 button.textContent = 'Switch to Dark Mode';
             }
         }
